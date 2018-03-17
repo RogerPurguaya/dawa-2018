@@ -17,6 +17,7 @@ var http = require('http')
 
 var fs = require('fs')
 
+http
 
 http.createServer((req, res) => {
     
@@ -27,3 +28,4 @@ http.createServer((req, res) => {
     })
 
 }).listen(8080)
+

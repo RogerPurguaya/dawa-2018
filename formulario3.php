@@ -8,22 +8,21 @@
 
    <script type="text/javascript">
    var sumar = function() {
-       var valor1 = parseInt(document.getElementById('valor1').value)
-       var valor2 = parseInt(document.getElementById('valor1').value)
+       var valor1 = parseFloat(document.getElementById('valor1').value)
+       var valor2 = parseFloat(document.getElementById('valor2').value)
        var res = document.getElementById('resultado').value = valor1 + valor2
-       
    };
    </script>
 </head>
 <body>
     <form>
          <p>Valor 1 :</p>
-        <br><br>
+        <br>
         <input type="text" name="valor1" id="valor1" size="20">
         <p>Valor 2 :</p>
-        <br><br>
+        <br>
         <input type="text" name="valor2" id="valor2" size="20">
-        <br><br>
+        <br>
         <p>Resultado: </p>
         <br>
         <input type="button" value="Sumar" onClick="sumar()">
