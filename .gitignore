@@ -1,3 +1,4 @@
 /Tarea(Web-Site)/node_modules/
 *.tmp
 */node_modules/
+/.vscode/
