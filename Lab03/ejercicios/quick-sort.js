@@ -2,55 +2,19 @@
 
 function ordenar(array) {
     let pivote = array[0]
-
     let punt1 = array[1]
     let punt2 = array[array.length-1]
-
-    let array_temp = []
-
+    let array_temp1 = []
+    let array_temp2 = []
     var temp1 = null
     var temp2 = null
     let aux = 0
-
+    //var array_final = resultado
 
     console.log('Array original: '+array.toString())
 
-    
-
-      //while (array.indexOf(punt1) !=  array.indexOf(punt2)) {
       while (aux < array.length-1) {
-        /* let punt1_tmp = null
-        let punt2_tmp = null
-
-        if (punt1 < pivote) {
-            let index = array.indexOf(punt1)
-            punt1 = array[index+1]
-        }else{
-            punt1_tmp = punt1
-        }
-
-        if (punt2 > pivote) {
-            let index = array.indexOf(punt2)
-            punt2 = array[index-1]
-        }else{
-            punt2_tmp = punt2
-        }
-
-        if (punt1_tmp != null && punt2_tmp != null) {
-            let indice1 = array.indexOf(punt1)
-            let indice2 = array.indexOf(punt2)
-            
-            array[indice1] = punt2
-            array[indice2] = punt1
-        }
-        console.log(array) */
-
-
-
-        console.log(punt1,punt2)
-
-        
-        
+        //console.log(punt1,punt2)
         if (punt1 > pivote) {
             temp1 = punt1
         }else{
@@ -79,40 +43,35 @@ function ordenar(array) {
         aux = aux + 2
         }
          
-        console.log(array)
-        //prueba 02
-        
-       /*  if (punt1 > pivote && punt2 < pivote) {
-            let indice1 = array.indexOf(punt1)
-            let indice2 = array.indexOf(punt2)
-            array[indice1] = punt2
-            array[indice2] = punt1
-            punt1 = array[indice1+1]
-            punt2 = array[indice2-1]
-            console.log(array)
-            console.log(punt1)
-            console.log(punt2)
-        } 
-        else if (punt1 > pivote) {
-            let indice1 = array.indexOf(punt1)
-            
-        }
-        else if (punt2 < pivote) {
-            
-        } */
-
+        //console.log(array)
     } 
-    console.log('salio del bucle',array)
-    console.log(punt1,punt2)
+    //console.log('salio del bucle',array)
+    //console.log(punt1,punt2)
     array.shift()
-    array.splice(array.indexOf(punt1), 0, pivote)
+    if (punt1 === undefined) {
+        array.splice(array.indexOf(punt2)+1, 0, pivote)
+    }else{
+        array.splice(array.indexOf(punt1), 0, pivote)
+    }
+    console.log('array con pivote: ',array)
+    array_temp1 = array.slice(0,array.indexOf(pivote))
+    array_temp2 = array.slice(array.indexOf(pivote)+1,) 
+    console.log('arrays : ',array_temp1,array_temp2)
+    console.log('------------------------------')
+    
+    if (array_temp1.length < 2) {
+       return array
+    }
+    else if(array_temp2.length < 2){
+      return array
+    }
+    else{
+        ordenar(array_temp1)
+        ordenar(array_temp2)
+    }
+    
 }
 
-const array = [2,3,1]
-
-ordenar(array)
-
-/* if (indice1==indice2) {
-                array.splice(indice1+1, 0, pivote)
-                console.log(array.toString()+'svfs')
-            } */
+const array = [4,5,6,7,1,2,8,9,3]
+var n = ordenar(array)
+console.log(n)
