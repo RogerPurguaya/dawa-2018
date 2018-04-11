@@ -1,6 +1,6 @@
 'use strict'
 
-function ordenar(array) {
+function ordenar(array,final) {
     let pivote = array[0]
     let punt1 = array[1]
     let punt2 = array[array.length-1]
@@ -58,20 +58,30 @@ function ordenar(array) {
     array_temp2 = array.slice(array.indexOf(pivote)+1,) 
     console.log('arrays : ',array_temp1,array_temp2)
     console.log('------------------------------')
-    
     if (array_temp1.length < 2) {
-       return array
+       final = final.concat(array)
+       console.log('concatenado : ',final)
+    }else{
+        ordenar(array_temp1,final)
     }
-    else if(array_temp2.length < 2){
-      return array
+    if(array_temp2.length < 2){
+        final = final.concat(array)
+        console.log('concatenado2 : ',final)
     }
     else{
-        ordenar(array_temp1)
-        ordenar(array_temp2)
+        ordenar(array_temp2,final)
     }
-    
+
+    return final
 }
 
 const array = [4,5,6,7,1,2,8,9,3]
-var n = ordenar(array)
-console.log(n)
+var sd = []
+var final = [10]
+//console.log(final.concat(sd))
+ var n = ordenar(array,final)
+console.log(ordenar(array,final)) 
+
+
+
+
