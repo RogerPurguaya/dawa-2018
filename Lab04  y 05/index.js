@@ -4,14 +4,14 @@ const app = express()
 app.use(express.static('public'))
 
 //middlewares:
- app.use((req, res, next) => {
+/*  app.use((req, res, next) => {
     res.sendStatus(404).send('Esto no existe !')
 })
 
 app.use((err, req, res, next) => {
     console.log(err.stack)
     res.sendStatus(500).send('Algo salió mal.')
-}) 
+}) */ 
 
 app.get('/', (req, res) => {
     res.send('Primer hola desde express')

@@ -71,6 +71,6 @@ module.exports = {
         res.send('EL producto se ha eliminado correctamente.')
         })
       })
-    },
+    }
   
 }
