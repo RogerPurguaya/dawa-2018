@@ -19,10 +19,32 @@ http.listen(port, () => {
 })
 
 io.on('connection', (socket) => {
+    
+    user.show((data) => {
+        socket.emit('listar',data)
+    })
+
+    socket.on('listar', () => {
+        user.show((data) => {
+            io.emit('listar',data)
+        })
+    })
+
     socket.on('crear', (data) => {
        user.create(data, (user) => {
-          io.emit('nuevo', user)
+            io.emit('nuevo', {user, message: 'Se ha creado un nuevo elemento'})
        })
     })
 
+    socket.on('actualizar', (data) => {
+        user.update(data, (user) => {
+            io.emit('nuevo', {user, message: 'Se ha actualizado un elemento'})
+        })
+    })
+
+    socket.on('eliminar', (data) => {
+        user.delete(data, (rpta) => {
+            io.emit('borrado',rpta)
+        })
+    })
 })
