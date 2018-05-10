@@ -1,0 +1,12 @@
+1. Logramos entender con mayor soltura los conceptos elementales
+   para trabajar con la librería React.js
+2. Con la ayuda y motivación del docente logramos desarrollar los
+   ejercicios planteados en la presente sesión de prácticas.
+3. Tuvimos algunos inconvenientes con el uso de la nueva sintaxis de 
+   .jsx ya que trae algunas modificaciones y/o implementaciones bajo los
+   estándares de ECMAscript 6.
+4. El ejercicio de implemtación de la calculadora nos ayudó en gran medida 
+   la forma de tratar con esta nueva tecnología y cómo abordar los errores 
+   que nos fué dando el desarrollo de la misma.
+5. Se logró despertar la curiosidad por conocer más a fondo las características 
+   y el potencial que posee React.js
