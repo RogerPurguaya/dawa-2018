@@ -1,0 +1,8 @@
+1.  Se logró ejecutar correctamente todas las peticiones HTTP a nuestra API.
+2.  Con la ayuda de Postman logramos ejecutar y testear correctamente las funciones y
+    las peticiones a nuestr API.
+3.  Logramos entender la importancia de gestionar la seguridad del API con la ayuda de de JSON
+    WEB TOKENs.
+4.  Tuvimos algunos inconvenientes con las primeras pruebas apara nuestra API debido a 
+    algunos fallos de sintaxis y problemas menores relacionados.
+5.  Con la ayuda de node logramos desarrollar un API enun tiempo relativamente corto y con un     gran performance.

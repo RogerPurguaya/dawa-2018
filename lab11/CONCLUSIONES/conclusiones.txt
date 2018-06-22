@@ -1,0 +1,8 @@
+1. Los conceptos aprendidos en la presente sesión de práctica fueron bastante útiles para        aplicarlos a futuros proyectos.
+2. El uso de react-router-dom nos muestra el gran potencial de la librería para gestionar
+   nuestras rutas de manera dinámica.
+3. Con la ayuda de la documentación oficial de react-router-dom logramos despejar 
+    algunas dudas sobre su funcionamiento.
+4. Logramos observar cómo react vuelve nuestro sitio web una Single page application.
+5.  Logramos establecer una simulación de api rest con un servicio JSON que luego será 
+    implementado
